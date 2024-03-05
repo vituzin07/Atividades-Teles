@@ -21,8 +21,8 @@ let brazilianFoods = []
 
 - Exiba a brazilianFoods no console.
 */
-const morebrazilianFoods = brazilianFoods.concat('Coxinha', null, 'Brigadeiro')
-console.log(morebrazilianFoods)
+const brazilianFoods = brazilianFoods.concat('Coxinha', null, 'Brigadeiro')
+console.log(brazilianFoods)
 /*
 04 - Comente o console.log acima e:
 
@@ -30,8 +30,8 @@ console.log(morebrazilianFoods)
 array "brazilianFoods" (null) seja substituído por "Pão de Queijo";
 - Exiba apenas o 2º item desse array no console.
 */
-morebrazilianFoods.splice(1, 1, 'Pão de queijo')
-console.log(morebrazilianFoods[1])
+brazilianFoods.splice(1, 1, 'Pão de queijo')
+console.log(brazilianFoods[1])
 /*
 05 - Comente o console.log acima e:
 
