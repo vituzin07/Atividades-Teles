@@ -21,7 +21,7 @@ let brazilianFoods = []
 
 - Exiba a brazilianFoods no console.
 */
-const brazilianFoods = brazilianFoods.concat('Coxinha', null, 'Brigadeiro')
+brazilianFoods.concat('Coxinha', null, 'Brigadeiro')
 console.log(brazilianFoods)
 /*
 04 - Comente o console.log acima e:
