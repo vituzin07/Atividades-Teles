@@ -13,9 +13,8 @@
   "Minhas 3 séries favoritas são: SÉRIE_01, SÉRIE_02 e SÉRIE_03."
 */
 const my3FavoriteTVShows = ['Vikings', 'Breaking Bad', 'One Piece']
-const sentence = 'Minhas 3 séries favoritas são: SÉRIE_01, SÉRIE_02 e SÉRIE_03.'
-console.log(`${sentence.slice(0, sentence.indexOf('SÉRIE_01'))}${my3FavoriteTVShows}`)
-
+const sentence = 'Minhas 3 séries favoritas são:' + my3FavoriteTVShows.slice(0, 2).join (", ") + " e " + my3FavoriteTVShows[2]+ ".";
+console.log(sentence)
 
 /*
   02 - Comente o console.log() acima e:
@@ -36,9 +35,9 @@ console.log(bool)
   - Utilize o método adequado para fazer essa verificação;
   - Exiba no console o boolean que a "isRandomTVShowIncluded" recebeu.
 */
-
-const isRandomTVShowIncluded = 'Watchmen'
-console.log(my3FavoriteTVShows.includes(isRandomTVShowIncluded))
+const randomTVShow = 'Watchmen'
+const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
+console.log(isRandomTVShowIncluded)
 
 /*
   04 - Comente o console.log() acima e:
@@ -67,8 +66,9 @@ console.log(TemptypeSentence)
   caracteres? BOOLEAN."
 */
 numChar = 39
-
-
+const sn = typeSentence.length>numChar
+const mysn = sn.toString()
+console.log(`A string que a \"typeSentence\" armazena tem mais de ${numChar} caracteres? ${mysn}.`)
 
 
 
@@ -83,6 +83,7 @@ numChar = 39
 */
 
 const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
+console.log(`Todos os ${falsyValues.length} itens do array \"falsyValues\" são falsy. Inclusive o ${falsyValues.every(value => !value)}.`)
 
 /*
   07 - Comente o console.log() acima e:
@@ -91,9 +92,11 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
   - Armazene em uma constante "crazyConversion" a conversão da "crazyOperation"  
     em boolean.
   - Você sabe por que essa conversão resultou em true?
+  RESPOSTA : O 1  FOI CONVERTIDO PARA VERDADEIRO, RESUTANDO EM TRUE. EM JS NUMEROS DIFERENTES DE ZERO SAO CONSIDERADOS VERDADEIROS
 */
-
-
+const crazyOperation = null + 1
+const crazyConversion = Boolean(crazyOperation)
+console.log(crazyConversion)
 
 /*
   08 - Comente o console.log() acima e:
@@ -107,7 +110,10 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
   "A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação  
   é: BOOLEAN."
 */
-
+const ages = [31, 82, 61, 11]
+const agesSum = ages[0] + ages[2]
+const resutado = agesSum<=92
+console.log(`A soma entre 0 1º e o 3º item de "ages" é menor ou igual a 92. Essa afrimação é: ${resutado}`)
 
 
 /*
@@ -118,8 +124,8 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
   - Essa expressão deve resultar em false.
   - Exiba a "isNotAString" no console.
 */
-
-
+const isNotAString = typeof randomTVShow !== 'string';
+console.log(isNotAString);
 
 /*
   10 - Comente o console.log() acima e:
@@ -130,3 +136,6 @@ const falsyValues = [0, "", false, '', ``, null, undefined, NaN]
 */
 
 const evenNumbers = [0, 2, 4, 6, 8, 10]
+const numberExists = evenNumbers.indexOf(8) !== -1;
+console.log(numberExists);
+ 
