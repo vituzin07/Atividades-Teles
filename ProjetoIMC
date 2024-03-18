@@ -59,7 +59,7 @@ for (let i = 0; i < arrayPesos.length; i++) {
             break
         case imc < 30: 
             diagnostico = "Sobrepeso";
-        default:
+        case imc > 30:
         diagnostico = "Obeso";
     }
     console.log(`Paciente (${i+1}): Nome: ${arrayNomes[i]} - Peso: ${arrayPesos[i]} Kg - Altura: ${arrayAlturas[i]} m - IMC: ${imc.toFixed(2)} - Diagnóstico: ${diagnostico}`);
