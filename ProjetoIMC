@@ -50,15 +50,17 @@ for (let i = 0; i < arrayPesos.length; i++) {
     let imc = arrayPesos[i] / (arrayAlturas[i] * arrayAlturas[i]);
     arrayIMCs.push(imc);
     let diagnostico;
-    if (imc < 18.5) {
-        diagnostico = "Abaixo do peso";
-    } else if (imc < 25) {
-        diagnostico = "Peso normal";
-    } else if (imc < 30) {
-        diagnostico = "Sobrepeso";
-    } else {
+    switch(imc) {
+        case imc < 18.5:
+            diagnostico = "Abaixo do peso";
+            break
+        case imc < 25:
+            diagnostico = "Peso normal";
+            break
+        case imc < 30: 
+            diagnostico = "Sobrepeso";
+        default:
         diagnostico = "Obeso";
     }
     console.log(`Paciente (${i+1}): Nome: ${arrayNomes[i]} - Peso: ${arrayPesos[i]} Kg - Altura: ${arrayAlturas[i]} m - IMC: ${imc.toFixed(2)} - Diagnóstico: ${diagnostico}`);
 }
-
