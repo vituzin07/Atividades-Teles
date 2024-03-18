@@ -41,9 +41,9 @@ saída =
 'Paciente (15): Nome: XXX - Peso: YY Kg - Altura: X.X m - IMC: ZZZZ - Diagnóstico: HHHH'
 
 */
-let arrayPesos = [78, 98, 50, 65, 80, 70, 90, 55, 68, 75, 85, 62, 73, 81, 72];
-let arrayAlturas = [1.80, 1.87, 1.80, 1.65, 1.72, 1.75, 1.90, 1.68, 1.73, 1.78, 1.81, 1.70, 1.76, 1.82, 1.77];
-let arrayNomes = ["Johny Cage", "Scorpion", "Joel Miller", "Ellie Williams", "Geralt of Rivia", "Ciri", "Aloy", "Kratos", "Atreus", "Ezio Auditore", "Bayek", "Connor Kenway", "Edward Kenway", "Altaïr Ibn-La'Ahad", "Arno Dorian"];
+let arrayPesos = [70, 98, 50, 65, 80, 70, 90, 55, 68, 75, 85, 62, 73, 81, 72];
+let arrayAlturas = [1.73, 1.87, 1.80, 1.65, 1.72, 1.75, 1.90, 1.68, 1.73, 1.78, 1.81, 1.70, 1.76, 1.82, 1.77];
+let arrayNomes = ["Victor", "Scorpion", "Joel Miller", "Ellie Williams", "Geralt of Rivia", "Ciri", "Aloy", "Kratos", "Atreus", "Ezio Auditore", "Bayek", "Connor Kenway", "Edward Kenway", "Altaïr Ibn-La'Ahad", "Arno Dorian"];
 let arrayIMCs = [];
 
 for (let i = 0; i < arrayPesos.length; i++) {
