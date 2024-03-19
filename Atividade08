@@ -90,6 +90,7 @@ function isPositive(number) {
   const totalNumeros = randomNumbers.length;
   const numerosPositivos = contarNumerosPositivos(randomNumbers);
   const numerosNegativos = totalNumeros - numerosPositivos;
+  console.log(`O array "randomNumbers" possui ${totalNumeros} números, sendo ${numerosPositivos} e ${numerosNegativos} negativos`)
 /*
   06
 
@@ -99,9 +100,11 @@ function isPositive(number) {
   - Exiba o novo array no console, sem inserir um console.log() dentro da  
     função.
 */
-
-// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
-
+const getOddNumbers = ([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
+function newgetOddNumbers(array) {
+  return array.filter(number => number % 2 !== 0);
+}
+console.log(newgetOddNumbers(getOddNumbers))
 /*
   07
 
@@ -138,3 +141,5 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
+const frase = functions.map(fn=>fn()).join(' ');
+console.log(frase)
