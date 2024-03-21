@@ -77,7 +77,7 @@ for (let i:number = 0; i < 7; i++) { textPrinter(i + 1) }
 const millennialWords:string[] = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
 let millennialWordsUpperCase:any = []
-let arrayPrinter:any = array => console.log(array)
+let arrayPrinter = array => console.log(array)
 
 for (let i:number = 0; i < millennialWords.length; i++) { millennialWordsUpperCase[i] = millennialWords[i].toUpperCase() }
 millennialWordsUpperCase.forEach(arrayPrinter)
@@ -96,8 +96,8 @@ const randomNumbers:number[] = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
  let testCountPositive = array => {
 
-    let counterPositives = 0
-    let arraySepPositives = []
+    let counterPositives: number= 0
+    let arraySepPositives: string[] = []
 
     for (let i = 0; i < array.length; i++) {
         if (array[i] > 0) {
@@ -213,7 +213,7 @@ console.log("A quantidade contada foi: " + counterQteChar('A String a ser contad
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
-let builderStrLowerCase = function (str = '') {
+let builderStrLowerCase: any = function (str: string = '') {
     return str.toLowerCase()
 }
 
@@ -227,7 +227,7 @@ console.log(varTest)
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
 
-let findIndex = (char = '', str = '') {
+let findIndex: any = (char: string = '', str: string= '') {
     for (let i = 0; i < str.length; i++) {
         if (str[i] === char) { return i }
     }
@@ -246,7 +246,7 @@ let itemBuscado: string = 'HBOMax'
 let streamingNames:string[] = ['Netflix', 'Spotify', 'PrimeVideo', 'Star+', 'HBOMax']
 let encontrado:boolean = false
 
-function buscadorNames(item:any = '', array:any = []) {
+function buscadorNames(item:string = '', array:string[] = []) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === item) { encontrado = true }
     }
@@ -262,7 +262,7 @@ console.log("O item buscado está no array? " + (buscadorNames(itemBuscado, stre
     argumentos em sua invocação;
 */
 
-let concatStringsFunction = (str1 = '', str2 = '') => str1.concat(str2)
+let concatStringsFunction:any = (str1:string= '', str2:string= '') => str1.concat(str2)
 console.log(concatStringsFunction('Está é a parte 01', 'Esta é a parte 02'))
 
 /*
@@ -305,7 +305,7 @@ console.log('O valor passado é null? ' + (isNullChecker(varNuller) ? 'Sim' : 'N
     argumento a função que exibe seu nome no console e veja se o nome realmente  
     foi exibido.
 */
-const impressoraCB = funcPrinterArrayCB => { funcPrinterArrayCB() }
+const impressoraCB:any= funcPrinterArrayCB => { funcPrinterArrayCB() }
 
 let funcPrinterArrayCB = () => console.log('Teles')
 
@@ -341,7 +341,7 @@ console.log(callBackFunc(triplica, 10))
 
 const numbers:number[] = [1, 2, 3]
 
-const logArrayNumbers = (number:any, index:any, array:any) => {
+const logArrayNumbers = (number: number, index: number, array: number) => {
     console.log(`O ${index + 1}º item do array ${array} é ${number}.`)
 }
 
@@ -356,7 +356,7 @@ numbers.forEach(logArrayNumbers);
 */
 
 const letters:string[] = ['v', 'e', 'p']
-let lettersCopy:any = []
+let lettersCopy:string[]= []
 
 // for (let i = 0; i < letters.length; i++) {
 //   lettersCopy.push(letters[i])
