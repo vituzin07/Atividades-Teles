@@ -65,16 +65,12 @@ adcionarcor(cat.color)
     parâmetro é um objeto;
   - Utilize a função para exibir no console se "cat" é um objeto.
 */
-/*
+
 function boll(objeto){
-    if (typeof boll() === object){
-     console.log(True)
-    }
-    if (typeof boll() !== object){
-     console.log(false)
-    }
+  return objeto ==='object' && objeto !== null
+  
 }
-boll(cat)
+console.log(boll('cat'))
 /*
   07
 
@@ -92,7 +88,7 @@ let dog ={
   sound:'Kamehameha!',
 }
 function msg(){
-  soma= cat.age + dog.age
+  let soma= cat.age + dog.age
   console.log(`A soma das idades de ${cat.name} e ${dog.name} é ${soma}.`)
 }
 msg()
@@ -103,14 +99,11 @@ msg()
     está funcionando corretamente. Mas ela pode ser melhorada;
   - Como você refatoraria esta função?
 */
-
+const carros = ['Honda HR-V', 'Jeep Renegade', 'Ford EcoSport', 'Hyundai iX35']
 const isAnSUV = car => {
-    if (car === 'Honda HR-V' || car === 'Jeep Renegade' || car === 'Ford EcoSport' || car === 'Hyundai iX35') {
-        return true
-    }
-
-    return false
+   return carros.includes(car)        
 }
+
 
 console.log(isAnSUV('Honda Civic'))
 console.log(isAnSUV('Ford EcoSport'))
@@ -127,7 +120,19 @@ console.log(isAnSUV('Ford EcoSport'))
     propriedades, retorne a mensagem que a propriedade armazena;
   - Teste a função, exibindo no console a mensagem de cada propriedade.
 */
-
+function objeto2(type){
+let tipos = {
+null: 'Seta, explicitamente, uma variável sem valor.',
+undefined:  'Representa um valor não-setado.',
+object: 'Arrays, Datas, Objetos literais, Funções, etc.'
+}
+ if (tipos.hasOwnProperty(type)) {
+        return tipos[type];
+    } else {
+        return 'Tipo não reconhecido.';
+    }
+}
+console.log(objeto2('null'))
 /*
 
 10
@@ -135,7 +140,7 @@ console.log(isAnSUV('Ford EcoSport'))
 - Declare uma constante que recebe o seu nome;
 - Ela deve ter um escopo global.
 */
-
+const nome = "João Victor"
 /*
   11
 
@@ -149,7 +154,12 @@ console.log(isAnSUV('Ford EcoSport'))
     defined" será exibido no console;
   - Você sabe por que isso aconteceu?
 */
-
+function minhaidade(){
+let idade= 19
+console.loG(idade)
+}
+//minhaidade()
+//isso aconteceu porque a variável declarada dentro da função tem escopo local, ela só é acessível dentro da função
 /*
   12
 
@@ -167,32 +177,50 @@ console.log(isAnSUV('Ford EcoSport'))
     - getColorsMessage, que é um método que retorna a mensagem  
       "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".
 */
+let car={
+	name: 'Bumblebee',
+	brand: 'Camaro',
+	colors: ['Amarelo', 'Preto'],
+	isRunning: false,
+  run: function(){
+  	car.isRunning = false;
+  	return`O ${car.name} está em movimento`;
+  },
+	stop: function(){
+  	car.isRunning = true;
+    return`O ${car.name} está parado`
+  },
+  getColorsMessage: function(){
+  const cor= car.colors.join(', ')
+  return`O ${car.name} está disponível nas cores ${cor}`
+  }
+}
 
 /*
   13
 
   - Faça o carro andar e exiba no console se ele realmente está em movimento.
 */
-
+console.log(car.run());
 /*
   14
 
   - Faça o carro parar e exiba no console se ele realmente está parado.
 */
-
+console.log(car.stop())
 /*
   15
 
   - Exiba, no console, a mensagem com as cores do carro.
 */
-
+console.log(car.getColorsMessage())
 /*
   16
 
   - Exiba, no console, a mensagem "O carro é um MARCA_DO_CARRO NOME_DO_CARRO";
   - Utilize a notação de colchetes para acessar as propriedades do carro.
 */
-
+console.log(`O carro é um ${car.brand} ${car.name}`)
 /*
   17
   - Aqui vamos simular um sistema de cadastro de um médico que deseja guardar informações sobre os seus pacientes em um hospital
